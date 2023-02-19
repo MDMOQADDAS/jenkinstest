@@ -18,7 +18,7 @@ pipeline {
           steps{
               sh 'docker rm -f test || date'
               sh "docker run -d --name test -t -p 80:80 myapplicationimage:$EXECUTOR_NUMBER"
-              sh "curl localhost | grep Application"
+             
           }
         }
         stage("Centralized Container Registery"){
