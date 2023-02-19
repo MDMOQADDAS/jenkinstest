@@ -5,7 +5,7 @@ pipeline {
         stage('SCM GitHub') {
             steps {
                 
-                git branch: 'main', url: 'https://github.com/MDMOQADDAS/jenkinstest.git'
+                git branch: 'master', url: 'https://github.com/MDMOQADDAS/jenkinstest.git'
             }
         }
        stage('Build'){
