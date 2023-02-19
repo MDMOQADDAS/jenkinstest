@@ -29,10 +29,11 @@ pipeline {
             }
         }
 
-        stage("Deployment")
+        stage("Deployment"){
         steps{
             sh 'docker rm -f test || date'
             sh "docker run -d --name test -t -p 80:80 myapplicationimage:$EXECUTOR_NUMBER"
+        }
         }
     }
 }
